@@ -1,8 +1,16 @@
 import Foundation
 
 class StockMaximize {
-
+    
+    var profit = 0
+    
     func countProfit(prices: [Int]) -> Int {
-        return -1
+        
+        var profit = 0
+                for price in prices {
+                    profit += prices.last! - price
+                }
+                return profit
+        
     }
 }
